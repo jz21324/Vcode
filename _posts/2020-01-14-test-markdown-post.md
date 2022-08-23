@@ -3,9 +3,9 @@ toc: true
 layout: post
 description: A blog of the life of Jazair.
 categories: [markdown]
-title: Jazair's Post
+title: Jazair's Example Markdown Post
 ---
-# Jazair's blog
+# Jazair's Example Markdown Post
 
 ## Basic setup
 
