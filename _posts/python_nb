@@ -1,0 +1,14 @@
+---
+toc: true
+layout: post
+description: Demonstration of python code
+categories: [markdown]
+title: Python Notebook
+---
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+
+Hello.main(null);

@@ -1,11 +1,11 @@
 ---
 toc: true
 layout: post
-description: A minimal example of using markdown with fastpages.
+description: A blog of the life of Jazair.
 categories: [markdown]
 title: Jazair's Post
 ---
-# Jazair's post
+# Jazair's blog
 
 ## Basic setup
 
