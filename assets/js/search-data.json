@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Java Notebook",
-            "content": "print(&quot;Hello World&quot;) . Hello World .",
+            "content": "print(&quot;Hello Java world!&quot;) . Hello Java world! .",
             "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/24/java_nb.html",
             "relUrl": "/jupyter/2022/08/24/java_nb.html",
             "date": " • Aug 24, 2022"
