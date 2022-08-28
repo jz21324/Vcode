@@ -4,9 +4,9 @@
         "post0": {
             "title": "Python Notebook",
             "content": "message = &quot;Hello World&quot; print(message) . Hello World .",
-            "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/25/python_nb.html",
-            "relUrl": "/jupyter/2022/08/25/python_nb.html",
-            "date": " • Aug 25, 2022"
+            "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/27/python_nb.html",
+            "relUrl": "/jupyter/2022/08/27/python_nb.html",
+            "date": " • Aug 27, 2022"
         }
         
     
@@ -14,10 +14,10 @@
     
         ,"post1": {
             "title": "Java Primitives Demonstration",
-            "content": "",
-            "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/25/java_primitives.html",
-            "relUrl": "/jupyter/2022/08/25/java_primitives.html",
-            "date": " • Aug 25, 2022"
+            "content": "float .",
+            "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/27/java_primitives.html",
+            "relUrl": "/jupyter/2022/08/27/java_primitives.html",
+            "date": " • Aug 27, 2022"
         }
         
     
@@ -26,9 +26,9 @@
         ,"post2": {
             "title": "Java Notebook",
             "content": "print(&quot;Hello Java world!&quot;) . Hello Java world! .",
-            "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/25/java_nb.html",
-            "relUrl": "/jupyter/2022/08/25/java_nb.html",
-            "date": " • Aug 25, 2022"
+            "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/27/java_nb.html",
+            "relUrl": "/jupyter/2022/08/27/java_nb.html",
+            "date": " • Aug 27, 2022"
         }
         
     
