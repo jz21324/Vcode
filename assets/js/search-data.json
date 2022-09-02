@@ -4,9 +4,9 @@
         "post0": {
             "title": "Python Notebook",
             "content": "message = &quot;Hello World&quot; print(message) . Hello World .",
-            "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/28/python_nb.html",
-            "relUrl": "/jupyter/2022/08/28/python_nb.html",
-            "date": " • Aug 28, 2022"
+            "url": "https://jz21324.github.io/Vcode/jupyter/2022/09/01/python_nb.html",
+            "relUrl": "/jupyter/2022/09/01/python_nb.html",
+            "date": " • Sep 1, 2022"
         }
         
     
@@ -15,9 +15,9 @@
         ,"post1": {
             "title": "Notes",
             "content": "Unit 1: Primitives . Primitives are datatypes that are built into java. The different datatypes are int, float, long, double, boolean, char, byte, and short. When it is lower case, it is primitive and when it is uppercase, it is part of a wrapper class. .",
-            "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/28/notes.html",
-            "relUrl": "/jupyter/2022/08/28/notes.html",
-            "date": " • Aug 28, 2022"
+            "url": "https://jz21324.github.io/Vcode/jupyter/2022/09/01/notes.html",
+            "relUrl": "/jupyter/2022/09/01/notes.html",
+            "date": " • Sep 1, 2022"
         }
         
     
@@ -25,10 +25,10 @@
     
         ,"post2": {
             "title": "Java Primitives Demonstration",
-            "content": "float a = 123.04 int b = 10 boolean c = false . Input In [4] float a = 123.04 ^ SyntaxError: invalid syntax .",
-            "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/28/java_primitives.html",
-            "relUrl": "/jupyter/2022/08/28/java_primitives.html",
-            "date": " • Aug 28, 2022"
+            "content": "int b = 10; boolean c = false; System.out.println(&quot;The integer is &quot; + b + &quot; and the boolean is &quot; + c) . The integer is 10 and the boolean isfalse .",
+            "url": "https://jz21324.github.io/Vcode/jupyter/2022/09/01/java_primitives.html",
+            "relUrl": "/jupyter/2022/09/01/java_primitives.html",
+            "date": " • Sep 1, 2022"
         }
         
     
@@ -36,10 +36,10 @@
     
         ,"post3": {
             "title": "Java Notebook",
-            "content": "print(&quot;Hello Java world!&quot;) . Hello Java world! .",
-            "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/28/java_nb.html",
-            "relUrl": "/jupyter/2022/08/28/java_nb.html",
-            "date": " • Aug 28, 2022"
+            "content": "System.out.println(&quot;Hello Java world!&quot;) . Hello Java world! .",
+            "url": "https://jz21324.github.io/Vcode/jupyter/2022/09/01/java_nb.html",
+            "relUrl": "/jupyter/2022/09/01/java_nb.html",
+            "date": " • Sep 1, 2022"
         }
         
     
@@ -47,10 +47,10 @@
     
         ,"post4": {
             "title": "Bash Check",
-            "content": "python --version . The kernel failed to start as a dll could not be loaded. Click &lt;a href=&#39;https://aka.ms/kernelFailuresDllLoad&#39;&gt;here&lt;/a&gt; for more info. .",
-            "url": "https://jz21324.github.io/Vcode/jupyter/2022/08/28/bash_checks.html",
-            "relUrl": "/jupyter/2022/08/28/bash_checks.html",
-            "date": " • Aug 28, 2022"
+            "content": "python --version .",
+            "url": "https://jz21324.github.io/Vcode/jupyter/2022/09/01/bash_checks.html",
+            "relUrl": "/jupyter/2022/09/01/bash_checks.html",
+            "date": " • Sep 1, 2022"
         }
         
     
