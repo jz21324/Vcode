@@ -35,7 +35,7 @@
   
     
         ,"post3": {
-            "title": "Java Objects demonstration",
+            "title": "Java Objects Demonstration",
             "content": "Objects . The code creates a public class called &quot;Student&quot;, which takes in three different instance variables: class, teacher, and period. With these a string of &quot;AP Computer Science A&quot;, another string of &quot;Mr. Mortensen&quot;, and an integer of 2 are put together to print out the statement, &quot;I have AP Computer Science A for Mr. Mortensen in period 2&quot; . public class Student { // instance variables public String class; public String teacher; public int period; public Student (String class, String teacher, int period) { this.class = class; this.teacher = teacher; this.period = period; } public static void main(String[] args) { Student s = new Student(&quot;AP Computer Science A&quot;, &quot;Mr. Mortensen&quot;, 2); system.out.println(&quot;I have &quot; + s.teacher &quot; for &quot; + s.class + &quot; in period &quot; + s.period); } } .",
             "url": "https://jz21324.github.io/Vcode/jupyter/2022/09/05/java_objects.html",
             "relUrl": "/jupyter/2022/09/05/java_objects.html",
