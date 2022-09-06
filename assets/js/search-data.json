@@ -35,8 +35,8 @@
   
     
         ,"post3": {
-            "title": "Java Objects demonstation",
-            "content": "public class Student { // instance variables public String class; public String teacher; public int period; public Student (String class, String teacher, int period) { this.class = class; this.teacher = teacher; this.period = period; } public static void main(String[] args) { Student s = new Student(&quot;AP Computer Science A&quot;, &quot;Mr. Mortensen&quot;, 2); system.out.println(&quot;I have &quot; + s.teacher &quot; for &quot; + s.class + &quot; in &quot; + s.period); } } .",
+            "title": "Java Objects demonstration",
+            "content": "public class Student { // instance variables public String class; public String teacher; public int period; public Student (String class, String teacher, int period) { this.class = class; this.teacher = teacher; this.period = period; } public static void main(String[] args) { Student s = new Student(&quot;AP Computer Science A&quot;, &quot;Mr. Mortensen&quot;, 2); system.out.println(&quot;I have &quot; + s.teacher &quot; for &quot; + s.class + &quot; in period &quot; + s.period); } } .",
             "url": "https://jz21324.github.io/Vcode/jupyter/2022/09/05/java_objects.html",
             "relUrl": "/jupyter/2022/09/05/java_objects.html",
             "date": " • Sep 5, 2022"
