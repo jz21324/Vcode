@@ -153,12 +153,26 @@ window.onload = wrap_img;
                 <span class="s">"==============================================================="</span>
            <span class="p">},</span>
            <span class="p">{</span>
-                <span class="s">"            ______                                             "</span><span class="p">,</span>
-                <span class="s">"           /|_||_\\`.__                                        "</span><span class="p">,</span>
-                <span class="s">"          (   _    _ _\\                                       "</span><span class="p">,</span>
-                <span class="s">"          =`-(_)--(_)-'                                        "</span><span class="p">,</span>
+                <span class="s">"                  ______                                       "</span><span class="p">,</span>
+                <span class="s">"                 /|_||_\\`.__                                  "</span><span class="p">,</span>
+                <span class="s">"                (   _    _ _\\                                 "</span><span class="p">,</span>
+                <span class="s">"                =`-(_)--(_)-'                                  "</span><span class="p">,</span>
                 <span class="s">"==============================================================="</span>            
            <span class="p">},</span>
+           <span class="p">{</span>
+                <span class="s">"                             ______                            "</span><span class="p">,</span>
+                <span class="s">"                            /|_||_\\`.__                       "</span><span class="p">,</span>
+                <span class="s">"                           (   _    _ _\\                      "</span><span class="p">,</span>
+                <span class="s">"                           =`-(_)--(_)-'                       "</span><span class="p">,</span>
+                <span class="s">"==============================================================="</span>            
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s">"                                                 ______        "</span><span class="p">,</span>
+                <span class="s">"                                                /|_||_\\`.__   "</span><span class="p">,</span>
+                <span class="s">"                                               (   _    _ _\\  "</span><span class="p">,</span>
+                <span class="s">"                                               =`-(_)--(_)-'   "</span><span class="p">,</span>
+                <span class="s">"==============================================================="</span>            
+            <span class="p">},</span>
         <span class="p">};</span>
     <span class="p">}</span>
 
@@ -166,17 +180,17 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Car drivng down in Java Loop"</span><span class="p">);</span>
 
-        <span class="kt">int</span> <span class="n">carPlace</span> <span class="o">=</span> <span class="n">car</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">carPlace</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">carPlace</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span>
         <span class="p">{</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">carPlace</span><span class="p">;</span> <span class="n">row</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
                 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">col</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">car</span><span class="o">[</span><span class="n">row</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">col</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">car</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">car</span><span class="o">[</span><span class="n">row</span><span class="o">][</span><span class="n">col</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
 
                 <span class="p">}</span>
             <span class="p">}</span>
 
-            <span class="n">carPlace</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">;</span>
+            
         <span class="p">}</span>
     <span class="p">}</span>
 
@@ -200,7 +214,87 @@ window.onload = wrap_img;
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>
 Car drivng down in Java Loop
-  ______                                                         /|_||_\`.__                                                   (   _    _ _\                                                  =`-(_)--(_)-'                                                   ===============================================================             ______                                                         /|_||_\`.__                                                   (   _    _ _\                                                  =`-(_)--(_)-'                                         ===============================================================   ______                                                         /|_||_\`.__                                                   (   _    _ _\                                                  =`-(_)--(_)-'                                                   =============================================================== </pre>
+  ______                                                        
+ /|_||_\`.__                                                   
+(   _    _ _\                                                  
+=`-(_)--(_)-'                                                   
+=============================================================== 
+                  ______                                        
+                 /|_||_\`.__                                   
+                (   _    _ _\                                  
+                =`-(_)--(_)-'                                   
+=============================================================== 
+                             ______                             
+                            /|_||_\`.__                        
+                           (   _    _ _\                       
+                           =`-(_)--(_)-'                        
+=============================================================== 
+                                                 ______         
+                                                /|_||_\`.__    
+                                               (   _    _ _\   
+                                               =`-(_)--(_)-'    
+=============================================================== 
+  ______                                                        
+ /|_||_\`.__                                                   
+(   _    _ _\                                                  
+=`-(_)--(_)-'                                                   
+=============================================================== 
+                  ______                                        
+                 /|_||_\`.__                                   
+                (   _    _ _\                                  
+                =`-(_)--(_)-'                                   
+=============================================================== 
+                             ______                             
+                            /|_||_\`.__                        
+                           (   _    _ _\                       
+                           =`-(_)--(_)-'                        
+=============================================================== 
+                                                 ______         
+                                                /|_||_\`.__    
+                                               (   _    _ _\   
+                                               =`-(_)--(_)-'    
+=============================================================== 
+  ______                                                        
+ /|_||_\`.__                                                   
+(   _    _ _\                                                  
+=`-(_)--(_)-'                                                   
+=============================================================== 
+                  ______                                        
+                 /|_||_\`.__                                   
+                (   _    _ _\                                  
+                =`-(_)--(_)-'                                   
+=============================================================== 
+                             ______                             
+                            /|_||_\`.__                        
+                           (   _    _ _\                       
+                           =`-(_)--(_)-'                        
+=============================================================== 
+                                                 ______         
+                                                /|_||_\`.__    
+                                               (   _    _ _\   
+                                               =`-(_)--(_)-'    
+=============================================================== 
+  ______                                                        
+ /|_||_\`.__                                                   
+(   _    _ _\                                                  
+=`-(_)--(_)-'                                                   
+=============================================================== 
+                  ______                                        
+                 /|_||_\`.__                                   
+                (   _    _ _\                                  
+                =`-(_)--(_)-'                                   
+=============================================================== 
+                             ______                             
+                            /|_||_\`.__                        
+                           (   _    _ _\                       
+                           =`-(_)--(_)-'                        
+=============================================================== 
+                                                 ______         
+                                                /|_||_\`.__    
+                                               (   _    _ _\   
+                                               =`-(_)--(_)-'    
+=============================================================== 
+</pre>
 </div>
 </div>
 
