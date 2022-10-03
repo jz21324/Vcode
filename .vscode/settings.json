@@ -2,4 +2,7 @@
     "cSpell.words": [
         "Jazair"
     ],
+    "java.project.sourcePaths": [
+        "_notebooks"
+    ],
 }
