@@ -2,17 +2,6 @@
   
     
         "post0": {
-            "title": "POJO and API",
-            "content": "import lombok.AllArgsConstructor; import lombok.Data; import lombok.NoArgsConstructor; import javax.persistence.*; @Data // Annotations to simplify writing code (ie constructors, setters) @NoArgsConstructor @AllArgsConstructor // Annotation to simplify creating an entity, which is a lightweight persistence domain object. Typically, an entity represents a table in a relational database, and each entity instance corresponds to a row in that table. public class Jokes { private Long id; // Unique identifier @Column(unique=true) private String joke; // The Joke private int haha; // Store joke likes private int boohoo; // Store joke jeers } . | import lombok.AllArgsConstructor; package lombok does not exist .",
-            "url": "https://jz21324.github.io/Vcode/jupyter/2022/10/20/pojo.html",
-            "relUrl": "/jupyter/2022/10/20/pojo.html",
-            "date": " • Oct 20, 2022"
-        }
-        
-    
-  
-    
-        ,"post1": {
             "title": "FRQ 2021",
             "content": "public class WordMatch { /** The secret string. */ private String secret; /** Constructs a WordMatch object with the given secret string of lowercase letters. */ /** Returns a score for guess, as described in part (a). * Precondition: 0 &lt; guess.length() &lt;= secret.length() */ public int scoreGuess(String guess) { int count = 0; for (int i = 0; i &lt;= secret.length() - guess.length(); i++) { if (secret.substring(i, i + guess.length()).equals(guess)) { count++; } } return count * guess.length() * guess.length(); /* to be implemented in part (a) */ } /** Returns the better of two guesses, as determined by scoreGuess and the rules for a * tie-breaker that are described in part (b). * Precondition: guess1 and guess2 contain all lowercase letters. * guess1 is not the same as guess2. */ public String findBetterGuess(String guess1, String guess2) { /* to be implemented in part (b) */ if (scoreGuess(guess1) &gt; scoreGuess(guess2)) { return guess1; } if (scoreGuess(guess2) &gt; scoreGuess(guess1)) { return guess2; } if (guess1.compareTo(guess2) &gt; 0) { return guess1; } return guess2; } } .",
             "url": "https://jz21324.github.io/Vcode/jupyter/2022/10/17/objects-lesson-frq.html",
@@ -23,7 +12,7 @@
     
   
     
-        ,"post2": {
+        ,"post1": {
             "title": "Learnings from Java Primitives lesson",
             "content": "Primitives . Booleans . true and false | one bit | . Integers . int values | 2-3 bits | . Double . decimal values | 64 bits | . boolean a = true; int b = 5; double c = 7.5; . Operators . addition: + subtraction: - division: / multiplication: * increase varaible by 1: ++ . int a = 5 + 10; int b = 20 - 5; int c = 45 / 3; int d = 5 * 3; System.out.println(a + b + c + d); . 60 . Video Learning Notes . Primitive Data Types in Java . A byte is just 8 bits. Int is used for integer values. Floats are used for values with few decimal digits, while doubles are used for values with many decimal digits. A boolean is used for false or true values. A char will have a single character. A string will have multiple characters. . byte a = 12; int b = 5; float c = 6.3f; double d = 7.344345542; boolean e = true; char f = &#39;W&#39;; String g = &quot;Hello&quot;; .",
             "url": "https://jz21324.github.io/Vcode/jupyter/2022/10/17/java-primatives-learning.html",
@@ -34,7 +23,7 @@
     
   
     
-        ,"post3": {
+        ,"post2": {
             "title": "Recursion Lesson",
             "content": "public class RecursionExample1 { static void recursion() { System.out.println(&quot;hello&quot;); recursion(); } public static void main(String[] args) { recursion(); } } .",
             "url": "https://jz21324.github.io/Vcode/jupyter/2022/10/13/recursion-lesson.html",
@@ -45,12 +34,23 @@
     
   
     
-        ,"post4": {
+        ,"post3": {
             "title": "Array List",
             "content": "Arrays can be configured through .add, .get, .set, .sort, .clear, and more methods. The .add method adds an index to the array list and the .get calls the specific index number. The .set method sets the index to a new index. The .sort method sorts the indexes in a certain order and .clear will clear all the indexes in the array. . import java.util.ArrayList; import java.util.Collections; public class Main { public static void main() { ArrayList&lt;String&gt; sports = new ArrayList&lt;String&gt;(); //Creates a new array sports.add(&quot;Football&quot;); sports.add(&quot;Basketball&quot;); //adds different sports to the array sports.add(&quot;Soccer&quot;); sports.add(&quot;Baseball&quot;); sports.add(&quot;Tennis&quot;); System.out.println(sports); // prints the array System.out.println(&quot; &quot;); for (int i = 0; i &lt; 5; i++) { System.out.println(sports.get(i)); // prints each array separately } System.out.println(&quot; &quot;); System.out.println(&quot;The size of the array is &quot; + sports.size()); //prints the size of the array sports.set(3, &quot;Golf&quot;); // changes the 3 array to &quot;Golf&quot; System.out.println(&quot;The 3 array has been changed to &quot; + sports.get(3)); System.out.println(&quot; &quot;); Collections.sort(sports); //sorts the array in alphabetical order System.out.println(&quot;The array list is in alphabetical order:&quot;); for (String i : sports) { System.out.println(i); } System.out.println(&quot; &quot;); sports.clear(); //clears the array System.out.println(&quot;The array list is now empty and says:&quot; + sports); } } Main.main(); . [Football, Basketball, Soccer, Baseball, Tennis] Football Basketball Soccer Baseball Tennis The size of the array is 5 The 3 array has been changed to Golf The array list is in alphabetical order: Basketball Football Golf Soccer Tennis The array list is now empty and says:[] .",
             "url": "https://jz21324.github.io/Vcode/jupyter/2022/10/07/array_list.html",
             "relUrl": "/jupyter/2022/10/07/array_list.html",
             "date": " • Oct 7, 2022"
+        }
+        
+    
+  
+    
+        ,"post4": {
+            "title": "POJO and API",
+            "content": "import lombok.AllArgsConstructor; import lombok.Data; import lombok.NoArgsConstructor; import javax.persistence.*; @Data // Annotations to simplify writing code (ie constructors, setters) @NoArgsConstructor @AllArgsConstructor // Annotation to simplify creating an entity, which is a lightweight persistence domain object. Typically, an entity represents a table in a relational database, and each entity instance corresponds to a row in that table. public class Jokes { private Long id; // Unique identifier @Column(unique=true) private String joke; // The Joke private int haha; // Store joke likes private int boohoo; // Store joke jeers } . | import lombok.AllArgsConstructor; package lombok does not exist .",
+            "url": "https://jz21324.github.io/Vcode/jupyter/2022/10/06/pojo.html",
+            "relUrl": "/jupyter/2022/10/06/pojo.html",
+            "date": " • Oct 6, 2022"
         }
         
     
