@@ -4,8 +4,8 @@
         "post0": {
             "title": "FRQ 3a Arrays",
             "content": "public void addMembers(String[] names, int gradYear) { for (String a: names) { MemberInfo newM = new memberInfo (a, gradYear, true); memberList.add(newM); } } .",
-            "url": "https://jz21324.github.io/Vcode/2022/10/26/arrays_frq.html",
-            "relUrl": "/2022/10/26/arrays_frq.html",
+            "url": "https://jz21324.github.io/Vcode/jupyter/2022/10/26/arrays_frq.html",
+            "relUrl": "/jupyter/2022/10/26/arrays_frq.html",
             "date": " • Oct 26, 2022"
         }
         
