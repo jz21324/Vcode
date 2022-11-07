@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Title",
-            "content": "import threading # import threading def keepUpdating(): # build a function to run over and over # global variable setup global run try: run except: run = 0 print(&quot;Seconds:&quot;, run) # replace this line with updates to data run += 1 # this is update to global variable threading.Timer(3.0, keepUpdating).start() keepUpdating() . Input In [22] global run ugiug ^ SyntaxError: invalid syntax . Seconds: 131 .",
+            "content": "import threading # import threading def keepUpdating(): # build a function to run over and over # global variable setup global run try: run except: run = 0 print(&quot;Seconds:&quot;, run) # replace this line with updates to data run += 1 # this is update to global variable threading.Timer(3.0, keepUpdating).start() keepUpdating() . Seconds: 811 Seconds: 812 Seconds: 813 Seconds: 814 Seconds: 815 Seconds: 816 Seconds: 817 Seconds: 818 Seconds: 819 Seconds: 820 Seconds: 821 Seconds: 822 Seconds: 823 Seconds: 824 Seconds: 825 Seconds: 826 Seconds: 827 Seconds: 828 .",
             "url": "https://jz21324.github.io/Vcode/2022/11/06/incremation.html",
             "relUrl": "/2022/11/06/incremation.html",
             "date": " • Nov 6, 2022"
