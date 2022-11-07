@@ -136,13 +136,13 @@ window.onload = wrap_img;
 
 <span class="k">def</span> <span class="nf">keepUpdating</span><span class="p">():</span> <span class="c1"># build a function to run over and over</span>
 <span class="c1"># global variable setup</span>
-    <span class="k">global</span> <span class="n">run</span>  
-<span class="k">try</span><span class="p">:</span> <span class="n">run</span>
-<span class="k">except</span><span class="p">:</span> <span class="n">run</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">global</span> <span class="n">run</span>
+    <span class="k">try</span><span class="p">:</span> <span class="n">run</span>
+    <span class="k">except</span><span class="p">:</span> <span class="n">run</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seconds:&quot;</span><span class="p">,</span> <span class="n">run</span><span class="p">)</span>  <span class="c1"># replace this line with updates to data</span>
-<span class="n">run</span> <span class="o">+=</span> <span class="mi">3</span>  <span class="c1"># this is update to global variable</span>
-<span class="n">threading</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">keepUpdating</span><span class="p">)</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Seconds:&quot;</span><span class="p">,</span> <span class="n">run</span><span class="p">)</span>  <span class="c1"># replace this line with updates to data</span>
+    <span class="n">run</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># this is update to global variable</span>
+    <span class="n">threading</span><span class="o">.</span><span class="n">Timer</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="n">keepUpdating</span><span class="p">)</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 
 <span class="n">keepUpdating</span><span class="p">()</span> 
 </pre></div>
@@ -156,8 +156,20 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  Input </span><span class="ansi-green-fg">In [22]</span>
+<span class="ansi-red-fg">    global run  ugiug</span>
+                ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Seconds: 3
+<pre>Seconds: 131
 </pre>
 </div>
 </div>
