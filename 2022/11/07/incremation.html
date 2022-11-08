@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://jz21324.github.io/Vcode/2022/11/06/incremation.html" />
-<meta property="og:url" content="https://jz21324.github.io/Vcode/2022/11/06/incremation.html" />
+<link rel="canonical" href="https://jz21324.github.io/Vcode/2022/11/07/incremation.html" />
+<meta property="og:url" content="https://jz21324.github.io/Vcode/2022/11/07/incremation.html" />
 <meta property="og:site_name" content="jazair’s fastpages" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-11-06T00:00:00-05:00" />
+<meta property="article:published_time" content="2022-11-07T00:00:00-06:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Title" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-06T00:00:00-05:00","datePublished":"2022-11-06T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://jz21324.github.io/Vcode/2022/11/06/incremation.html"},"url":"https://jz21324.github.io/Vcode/2022/11/06/incremation.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-07T00:00:00-06:00","datePublished":"2022-11-07T00:00:00-06:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Title","mainEntityOfPage":{"@type":"WebPage","@id":"https://jz21324.github.io/Vcode/2022/11/07/incremation.html"},"url":"https://jz21324.github.io/Vcode/2022/11/07/incremation.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Vcode/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jz21324.github.io/Vcode/feed.xml" title="jazair's fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Vcode/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,8 +73,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-11-06T00:00:00-05:00" itemprop="datePublished">
-        Nov 6, 2022
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-11-07T00:00:00-06:00" itemprop="datePublished">
+        Nov 7, 2022
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -132,6 +132,50 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">let</span> <span class="n">clockElement</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">&#39;clock&#39;</span><span class="p">)</span>
+<span class="o">//</span> <span class="n">Execute</span> <span class="n">clock</span> <span class="n">function</span> <span class="n">on</span> <span class="n">load</span>
+<span class="n">clock</span><span class="p">();</span>
+<span class="o">//</span> <span class="n">Clock</span> <span class="n">update</span> <span class="n">executes</span> <span class="n">on</span> <span class="n">each</span> <span class="n">interval</span> <span class="nb">set</span> <span class="n">by</span> <span class="n">timer</span>
+<span class="n">function</span> <span class="n">clock</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">let</span> <span class="n">date</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">();</span>
+    <span class="n">clockElement</span><span class="o">.</span><span class="n">textContent</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">toLocaleString</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="o">//</span> <span class="n">Clock</span> <span class="n">refresh</span> <span class="n">timer</span><span class="p">,</span> <span class="n">a</span> <span class="n">reoccurring</span> <span class="n">event</span>
+<span class="n">setInterval</span><span class="p">(</span><span class="n">clock</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  Input </span><span class="ansi-green-fg">In [44]</span>
+<span class="ansi-red-fg">    let clockElement = document.getElementById(&#39;clock&#39;)</span>
+        ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">threading</span>  <span class="c1"># import threading</span>
 
 <span class="k">def</span> <span class="nf">keepUpdating</span><span class="p">():</span> <span class="c1"># build a function to run over and over</span>
@@ -157,24 +201,110 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Seconds: 811
-Seconds: 812
-Seconds: 813
-Seconds: 814
-Seconds: 815
-Seconds: 816
-Seconds: 817
-Seconds: 818
-Seconds: 819
-Seconds: 820
-Seconds: 821
-Seconds: 822
-Seconds: 823
-Seconds: 824
-Seconds: 825
-Seconds: 826
-Seconds: 827
-Seconds: 828
+<pre>Seconds: 130229
+Seconds: 130230
+Seconds: 130231
+Seconds: 130232
+Seconds: 130233
+Seconds: 130234
+Seconds: 130235
+Seconds: 130236
+Seconds: 130237
+Seconds: 130238
+Seconds: 130239
+Seconds: 130240
+Seconds: 130241
+Seconds: 130242
+Seconds: 130243
+Seconds: 130244
+Seconds: 130245
+Seconds: 130246
+Seconds: 130247
+Seconds: 130248
+Seconds: 130249
+Seconds: 130250
+Seconds: 130251
+Seconds: 130252
+Seconds: 130253
+Seconds: 130254
+Seconds: 130255
+Seconds: 130256
+Seconds: 130257
+Seconds: 130258
+Seconds: 130259
+Seconds: 130260
+Seconds: 130261
+Seconds: 130262
+Seconds: 130263
+Seconds: 130264
+Seconds: 130265
+Seconds: 130266
+Seconds: 130267
+Seconds: 130268
+Seconds: 130269
+Seconds: 130270
+Seconds: 130271
+Seconds: 130272
+Seconds: 130273
+Seconds: 130274
+Seconds: 130275
+Seconds: 130276
+Seconds: 130277
+Seconds: 130278
+Seconds: 130279
+Seconds: 130280
+Seconds: 130281
+Seconds: 130282
+Seconds: 130283
+Seconds: 130284
+Seconds: 130285
+Seconds: 130286
+Seconds: 130287
+Seconds: 130288
+Seconds: 130289
+Seconds: 130290
+Seconds: 130291
+Seconds: 130292
+Seconds: 130293
+Seconds: 130294
+Seconds: 130295
+Seconds: 130296
+Seconds: 130297
+Seconds: 130298
+Seconds: 130299
+Seconds: 130300
+Seconds: 130301
+Seconds: 130302
+Seconds: 130303
+Seconds: 130304
+Seconds: 130305
+Seconds: 130306
+Seconds: 130307
+Seconds: 130308
+Seconds: 130309
+Seconds: 130310
+Seconds: 130311
+Seconds: 130312
+Seconds: 130313
+Seconds: 130314
+Seconds: 130315
+Seconds: 130316
+Seconds: 130317
+Seconds: 130318
+Seconds: 130319
+Seconds: 130320
+Seconds:Seconds: 130321
+ 130321
+Seconds: 130323
+Seconds: 130324
+Seconds: 130325
+Seconds: 130326
+Seconds: 130327
+Seconds: 130328
+Seconds: 130329
+Seconds: 130330
+Seconds:Seconds: 130331
+ 130331
 </pre>
 </div>
 </div>
@@ -189,7 +319,7 @@ Seconds: 828
 
 
 
-  </div><a class="u-url" href="/Vcode/2022/11/06/incremation.html" hidden></a>
+  </div><a class="u-url" href="/Vcode/2022/11/07/incremation.html" hidden></a>
 </article>
 
       </div>
