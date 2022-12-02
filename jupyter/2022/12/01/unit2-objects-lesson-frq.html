@@ -136,7 +136,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To combine two different strings, you can use <mark>concatenation</mark> which can combine two or more strings to create one new string.</p>
+<p>After creating an object for a class, a <mark>constructor</mark> is called and can set initial values for the object attributes.</p>
 
 </div>
 </div>
@@ -148,44 +148,19 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">WordMatch</span> <span class="p">{</span>
-    <span class="cm">/** The secret string. */</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">secret</span><span class="p">;</span>
-    <span class="cm">/** Constructs a WordMatch object with the given secret string of lowercase letters. */</span>
-    
-    <span class="cm">/** Returns a score for guess, as described in part (a).</span>
-<span class="cm">    * Precondition: 0 &lt; guess.length() &lt;= secret.length()</span>
-<span class="cm">    */</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">scoreGuess</span><span class="p">(</span><span class="n">String</span> <span class="n">guess</span><span class="p">)</span> <span class="p">{</span> 
-        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">secret</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">-</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">secret</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">()).</span><span class="na">equals</span><span class="p">(</span><span class="n">guess</span><span class="p">))</span> <span class="p">{</span>
-                <span class="n">count</span><span class="o">++</span><span class="p">;</span>
-            <span class="p">}</span>
-            
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">count</span> <span class="o">*</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">*</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
-        <span class="cm">/* to be implemented in part (a) */</span> 
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span><span class="p">;</span>  <span class="c1">// Create a class attribute</span>
+  
+    <span class="c1">// Create a class constructor for the Main class</span>
+    <span class="kd">public</span> <span class="nf">Main</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>  <span class="c1">// Set the initial value for the class attribute x</span>
     <span class="p">}</span>
-    <span class="cm">/** Returns the better of two guesses, as determined by scoreGuess and the rules for a</span>
-<span class="cm">    * tie-breaker that are described in part (b).</span>
-<span class="cm">    * Precondition: guess1 and guess2 contain all lowercase letters.</span>
-<span class="cm">    * guess1 is not the same as guess2.</span>
-<span class="cm">    */</span>
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">findBetterGuess</span><span class="p">(</span><span class="n">String</span> <span class="n">guess1</span><span class="p">,</span> <span class="n">String</span> <span class="n">guess2</span><span class="p">)</span> <span class="p">{</span> 
-        <span class="cm">/* to be implemented in part (b) */</span> 
-        <span class="k">if</span> <span class="p">(</span><span class="n">scoreGuess</span><span class="p">(</span><span class="n">guess1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">scoreGuess</span><span class="p">(</span><span class="n">guess2</span><span class="p">))</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="n">guess1</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">scoreGuess</span><span class="p">(</span><span class="n">guess2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">scoreGuess</span><span class="p">(</span><span class="n">guess1</span><span class="p">))</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="n">guess2</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">guess1</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="n">guess2</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="n">guess1</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">guess2</span><span class="p">;</span>
+  
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">Main</span> <span class="n">myObj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Main</span><span class="p">();</span> <span class="c1">// Create an object of class Main (This will call the constructor)</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">myObj</span><span class="p">.</span><span class="na">x</span><span class="p">);</span> <span class="c1">// Print the value of x</span>
     <span class="p">}</span>
-<span class="p">}</span>
+  <span class="p">}</span>
 </pre></div>
 
     </div>
@@ -195,6 +170,51 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><mark>Accessor</mark> and <mark>mutator</mark> methods can be used to return the value of a private variable and change the value of the variable respectively.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">CheckingAccount</span><span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">balance</span><span class="p">;</span>
+    
+    <span class="c1">//An accessor method</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getBalance</span><span class="p">(){</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">balance</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">//A mutator method</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setBalance</span><span class="p">(</span><span class="kt">int</span> <span class="n">newBalance</span><span class="p">){</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">balance</span> <span class="o">=</span> <span class="n">newBalance</span><span class="p">;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To combine two different strings, you can use <mark>concatenation</mark> which can combine two or more strings to create one new string.</p>
+
+</div>
+</div>
+</div>
 </div>
 
 
