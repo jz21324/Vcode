@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -127,10 +127,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Java-Wrappers">Java Wrappers </a></li>
 <li class="toc-entry toc-h1"><a href="#Operators">Operators </a>
 <ul>
-<li class="toc-entry toc-h4"><a href="#Addition">Addition </a></li>
-<li class="toc-entry toc-h4"><a href="#Subtraction">Subtraction </a></li>
-<li class="toc-entry toc-h4"><a href="#Division">Division </a></li>
-<li class="toc-entry toc-h4"><a href="#Multiplication">Multiplication </a></li>
+<li class="toc-entry toc-h4"><a href="#Addition-(+)">Addition (+) </a></li>
+<li class="toc-entry toc-h4"><a href="#Subtraction-(-)">Subtraction (-) </a></li>
+<li class="toc-entry toc-h4"><a href="#Division-(/)">Division (/) </a></li>
+<li class="toc-entry toc-h4"><a href="#Multiplication-(*)">Multiplication (*) </a></li>
+<li class="toc-entry toc-h4"><a href="#Increment-(++,---)">Increment (++, --) </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Video-Learning-Notes">Video Learning Notes </a></li>
@@ -196,31 +197,108 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>The <mark>Math class</mark> allows you to use different math related methods such as min, max, avg, sin, abs, etc. Namely, there is the java.lang.Math.random() method which will give a random number between 0.0 and 1.0.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">28</span><span class="p">;</span>    
+<span class="kt">double</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">z</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">();</span>      
+          
+<span class="c1">// return the maximum of two numbers  </span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Maximum number of x and y is: "</span> <span class="o">+</span><span class="n">Math</span><span class="p">.</span><span class="na">max</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">));</span>   
+          
+<span class="c1">// return the square root of y   </span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Square root of y is: "</span> <span class="o">+</span> <span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="n">y</span><span class="p">));</span>   
+          
+ <span class="c1">//returns 28 power of 4 i.e. 28*28*28*28    </span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Power of x and y is: "</span> <span class="o">+</span> <span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">));</span>      
+  
+<span class="c1">// return the logarithm of given value       </span>
+ <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Logarithm of x is: "</span> <span class="o">+</span> <span class="n">Math</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>   
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Logarithm of y is: "</span> <span class="o">+</span> <span class="n">Math</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="n">y</span><span class="p">));</span>  
+          
+<span class="c1">// return the logarithm of given value when base is 10      </span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"log10 of x is: "</span> <span class="o">+</span> <span class="n">Math</span><span class="p">.</span><span class="na">log10</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>   
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"log10 of y is: "</span> <span class="o">+</span> <span class="n">Math</span><span class="p">.</span><span class="na">log10</span><span class="p">(</span><span class="n">y</span><span class="p">));</span>    
+          
+<span class="c1">// return the log of x + 1  </span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"log1p of x is: "</span> <span class="o">+</span><span class="n">Math</span><span class="p">.</span><span class="na">log1p</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>    
+  
+<span class="c1">// return a power of 2    </span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"exp of a is: "</span> <span class="o">+</span><span class="n">Math</span><span class="p">.</span><span class="na">exp</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>    
+          
+<span class="c1">// return (a power of 2)-1  </span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"expm1 of a is: "</span> <span class="o">+</span><span class="n">Math</span><span class="p">.</span><span class="na">expm1</span><span class="p">(</span><span class="n">x</span><span class="p">));</span>  
+
+<span class="c1">// returns a random number</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">z</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Maximum number of x and y is: 28.0
+Square root of y is: 2.0
+Power of x and y is: 614656.0
+Logarithm of x is: 3.332204510175204
+Logarithm of y is: 1.3862943611198906
+log10 of x is: 1.4471580313422192
+log10 of y is: 0.6020599913279624
+log1p of x is: 3.367295829986474
+exp of a is: 1.446257064291475E12
+expm1 of a is: 1.446257064290475E12
+0.09599477421748714
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Operators">
 <a class="anchor" href="#Operators" aria-hidden="true"><span class="octicon octicon-link"></span></a>Operators<a class="anchor-link" href="#Operators"> </a>
 </h1>
-<h4 id="Addition">
-<a class="anchor" href="#Addition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Addition<a class="anchor-link" href="#Addition"> </a>
+<h4 id="Addition-(+)">
+<a class="anchor" href="#Addition-(+)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Addition (+)<a class="anchor-link" href="#Addition-(+)"> </a>
 </h4>
-<p>Symbol: +</p>
-<h4 id="Subtraction">
-<a class="anchor" href="#Subtraction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subtraction<a class="anchor-link" href="#Subtraction"> </a>
+<h4 id="Subtraction-(-)">
+<a class="anchor" href="#Subtraction-(-)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Subtraction (-)<a class="anchor-link" href="#Subtraction-(-)"> </a>
 </h4>
-<p>Symbol: -</p>
-<h4 id="Division">
-<a class="anchor" href="#Division" aria-hidden="true"><span class="octicon octicon-link"></span></a>Division<a class="anchor-link" href="#Division"> </a>
+<h4 id="Division-(/)">
+<a class="anchor" href="#Division-(/)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Division (/)<a class="anchor-link" href="#Division-(/)"> </a>
 </h4>
-<p>Symbol: /</p>
 <p>A <mark>casting for doubles</mark> will temporarily create a double value so that instead of having an int, it will have a double temporarily.</p>
 <p>       Ex: 7/(double)3 will make a temporary 3.0</p>
 <p>A <mark>casting for integers or rounding</mark> will temporarily round a double value so that it is an integer.</p>
 <p>       Ex: 7/(int)3.333 will make a temporary 3</p>
-<h4 id="Multiplication">
-<a class="anchor" href="#Multiplication" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiplication<a class="anchor-link" href="#Multiplication"> </a>
+<h4 id="Multiplication-(*)">
+<a class="anchor" href="#Multiplication-(*)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Multiplication (*)<a class="anchor-link" href="#Multiplication-(*)"> </a>
 </h4>
-<p>Symbol: *
-increase varaible by 1: ++</p>
-
+<h4 id="Increment-(++,---)">
+<a class="anchor" href="#Increment-(++,---)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Increment (++, --)<a class="anchor-link" href="#Increment-(++,---)"> </a>
+</h4>
 </div>
 </div>
 </div>
