@@ -148,6 +148,14 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This is what a recursion looks like where the example method is called within itself.</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -171,7 +179,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This is what a recursion looks like where the example method is called within itself.</p>
+<p>In this example, the simplerRecur method is called within itself. So, simplerRecur(4) will result in printing 4 and then one less than it until the parameter is false. It then cycles back up to the top of the call stack. This is why it returns the 2 3 4 at the end.</p>
 
 </div>
 </div>
@@ -222,7 +230,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this example, the simplerRecur method is called within itself. So, simplerRecur(4) will result in printing 4 and then one less than it until the parameter is false. It then cycles back up to the top of the call stack. This is why it returns the 2 3 4 at the end.</p>
+<p>In this, simpleRecur2(8) wil return 8 + simpleRecur2(4) and simpleRecur2(4) will return 4 + simpleRecur2(2). This process will continue until n = 0 and all the values will be added together.</p>
+<p>8 + 4 + 2 + 1 + 0</p>
 
 </div>
 </div>
@@ -268,8 +277,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this, simpleRecur2(8) wil return 8 + simpleRecur2(4) and simpleRecur2(4) will return 4 + simpleRecur2(2). This process will continue until n = 0 and all the values will be added together.</p>
-<p>8 + 4 + 2 + 1 + 0</p>
+<p>This one is similar to the last example where it will add the values together but this has multiple recursive methods inside it. So, dblRecur(5) will return 5 + dblRecur(2) + dblRecur(1) and then dblRecur(2) and dblRecur(1) will have their own run through the method until n is no longer greater than 0.</p>
 
 </div>
 </div>
@@ -315,7 +323,7 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>This one is similar to the last example where it will add the values together but this has multiple recursive methods inside it. So, dblRecur(5) will return 5 + dblRecur(2) + dblRecur(1) and then dblRecur(2) and dblRecur(1) will have their own run through the method until n is no longer greater than 0.</p>
+<p>Recursion can also be seen will String objects. In this, mystery("computer") will first go through the mystery(s.substring(2)) which will result in a call stack with "computer", "mputer", "uter", "er", and " ". THe print statement will then print the first letter of those Strings so e u m c.</p>
 
 </div>
 </div>
@@ -356,14 +364,6 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>Recursion can also be seen will String objects. In this, mystery("computer") will first go through the mystery(s.substring(2)) which will result in a call stack with "computer", "mputer", "uter", "er", and " ". THe print statement will then print the first letter of those Strings so e u m c.</p>
-
-</div>
-</div>
-</div>
 </div>
 
 
