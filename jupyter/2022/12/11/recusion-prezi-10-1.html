@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      9 min read
     
 </span></p>
 
@@ -128,6 +128,18 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Binary-Search-With-Equations">Binary Search With Equations </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Merge-Sort">Merge Sort </a></li>
+<li class="toc-entry toc-h2"><a href="#Recursion-Trees">Recursion Trees </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Example-of-Recursion-Tree">Example of Recursion Tree </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Class-Activity">Class Activity </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Fibonacci-Code">Fibonacci Code </a></li>
+<li class="toc-entry toc-h3"><a href="#Factorial-Code">Factorial Code </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Homework-(MC)">Homework (MC) </a></li>
 </ul>
 </li>
 </ul><!--
@@ -503,6 +515,242 @@ mergeSort (myList) {
 <p><img src="/Vcode/images/copied_from_nb/../images/merging6.png" alt="merging6"></p>
 <p>This is a code segment that CollegeBoard had provided in order to see the recursion behind mergeSort(). The code calls mergeSort() on itself in order to sort the list and merge the halves until you reach the right order and final list.</p>
 <p><img src="/Vcode/images/copied_from_nb/../images/merging7.png" alt="merging7"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Recursion-Trees">
+<a class="anchor" href="#Recursion-Trees" aria-hidden="true"><span class="octicon octicon-link"></span></a>Recursion Trees<a class="anchor-link" href="#Recursion-Trees"> </a>
+</h2>
+<p>Recursion trees are a method for visualizing each recursive case (everytime the method is called) until the base case is reached.</p>
+<p>Recursive blocks call themselves. In order for them to finish, there must be some special case in which they don't call themselves. That is the base case, a simpler version of the block's script that doesn't call the block itself.</p>
+<p>There is usually a conditional with two cases: a base case for the lowest level that stops the recursion from going on forever and a recursive case that calls the block itself at lower levels until it reaches the base case.</p>
+<p>Note: If a block keeps recursively calling itself forever, the program is stuck in an infinite loop meaning that there isn't a base case or it is not accessible.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Example-of-Recursion-Tree">
+<a class="anchor" href="#Example-of-Recursion-Tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example of Recursion Tree<a class="anchor-link" href="#Example-of-Recursion-Tree"> </a>
+</h3>
+<p>Q: What is the value returned by foo(3)?</p>
+<p>A: Use a recursion tree!</p>
+<p><img src="/Vcode/images/copied_from_nb/../images/recursionimage.png" alt="merging7"></p>
+<p>Since the base case of foo returns 1, we can just add up all the function calls that return the base case.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">example</span><span class="p">{</span>
+    <span class="kd">static</span> <span class="kt">int</span> <span class="nf">foo</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span><span class="p">{</span>
+            <span class="k">return</span> <span class="n">foo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">foo</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">){</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">foo</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">example</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>8
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Class-Activity">
+<a class="anchor" href="#Class-Activity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Class Activity<a class="anchor-link" href="#Class-Activity"> </a>
+</h2>
+<p>If you are on the left side of the class, you will be working with the factorial code. If you are on the right side of the class, you will be working with the fibonacci code. The objective is to work with your crossover team to act out the recursion tree for the code segments below. The first team from each side to show up the correct recursion tree will receive candy!</p>
+<p>TASK: You and your crossover team must physically act out the recursion tree, meaning standing up and each taking a sticky note to represent each branch of the tree.</p>
+<p>If you are on the Fibonacci side: You will be acting out fib(3)</p>
+<p>If you are on the Factorial side: You will be acting out fact(4)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Fibonacci-Code">
+<a class="anchor" href="#Fibonacci-Code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Fibonacci Code<a class="anchor-link" href="#Fibonacci-Code"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Fibonacci Series using Recursion</span>
+<span class="kd">class</span> <span class="nc">fibonacci</span> <span class="p">{</span>
+	<span class="kd">static</span> <span class="kt">int</span> <span class="nf">fib</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="c1">// Handling base case</span>
+		<span class="c1">// iIf value of n=1 or n=0, it returns 1</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
+			<span class="k">return</span> <span class="n">n</span><span class="p">;</span>
+
+		<span class="c1">// Generic case</span>
+        <span class="c1">// Otherwise we do n-1 + n-2!	</span>
+		<span class="k">return</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">);</span>
+	<span class="p">}</span>
+
+	<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="c1">// Calling method 1 to compute fibonacci and</span>
+        <span class="c1">// storing the result into a variable</span>
+		<span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+		<span class="c1">// Print and display the fibonacci of number</span>
+        <span class="c1">// customly passed as an argument</span>
+		<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"3rd Fibonacci Sequence is: "</span> <span class="o">+</span> <span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">fibonacci</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3rd Fibonacci Sequence is: 2
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Factorial-Code">
+<a class="anchor" href="#Factorial-Code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Factorial Code<a class="anchor-link" href="#Factorial-Code"> </a>
+</h3>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">factorial</span> <span class="p">{</span>
+ 
+    <span class="kd">static</span> <span class="kt">int</span> <span class="nf">fact</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+    <span class="p">{</span>
+ 
+        <span class="c1">// Handling base case</span>
+        <span class="c1">// iIf value of n=1 or n=0, it returns 1</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+ 
+        <span class="c1">// Generic case</span>
+        <span class="c1">// Otherwise we do n*(n-1)!</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+ 
+    <span class="c1">// Method 2</span>
+    <span class="c1">// main driver method</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span>
+    <span class="p">{</span>
+ 
+        <span class="c1">// Calling method 1 to compute factorial and</span>
+        <span class="c1">// storing the result into a variable</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+        <span class="c1">// Print and display the factorial of number</span>
+        <span class="c1">// customly passed as an argument</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Factorial of 4 is: "</span> <span class="o">+</span> <span class="n">fact</span><span class="p">(</span><span class="n">n</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">factorial</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Factorial of 4 is: 24
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Homework-(MC)">
+<a class="anchor" href="#Homework-(MC)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Homework (MC)<a class="anchor-link" href="#Homework-(MC)"> </a>
+</h2>
+<p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdqAPDDeRqH4wU8soSGx5v-0Iy9kX8h4vnxXMeq5_ErUF5skw/viewform?usp=sf_link">https://docs.google.com/forms/d/e/1FAIpQLSdqAPDDeRqH4wU8soSGx5v-0Iy9kX8h4vnxXMeq5_ErUF5skw/viewform?usp=sf_link</a></p>
 
 </div>
 </div>
