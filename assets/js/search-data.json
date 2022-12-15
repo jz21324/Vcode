@@ -101,7 +101,7 @@
   
     
         ,"post9": {
-            "title": "Unit 7 2D Arrays Homework",
+            "title": "Unit 7 2D Array List Homework",
             "content": "Score: 0.9/1.0 . import java.util.*; import java.lang.Math; ArrayList&lt;Integer&gt; number = new ArrayList&lt;Integer&gt;(); ArrayList&lt;Integer&gt; number2 = new ArrayList&lt;Integer&gt;(); for (int i = 0; i &lt; 5; i++){ number.add(i); } for (int i = 5; i &gt; 0; i--){ number.add(i); } System.out.println(&quot;Original: &quot; +number); System.out.println(&quot;HashCode: &quot; + number.hashCode()); number.sort(Comparator.reverseOrder()); System.out.println(&quot;ArrayList after sort: &quot; + number); System.out.println(&quot;HashCode: &quot; + number.hashCode()); Collections.swap(number, 4, 0); System.out.println(&quot;Swap the first and last elements: &quot; + number); System.out.println(&quot;HashCode: &quot; + number.hashCode()); boolean a; boolean b; for (int i=0; i &lt; number.size() - 1; i++){ if (!(number.get(i) &lt;= number.get(i + 1))){ boolean a = false; } if (!(number.get(i) &gt;= number.get(i + 1))){ boolean b = false; } } if (a){ System.out.println(&quot;ascending&quot;); } if (b){ System.out.println(&quot;descending&quot;); } else{ System.out.println(&quot;neither&quot;); } . Original: [0, 1, 2, 3, 4, 5, 4, 3, 2, 1] HashCode: -1631985086 ArrayList after sort: [5, 4, 4, 3, 3, 2, 2, 1, 1, 0] HashCode: -287789284 Swap the first and last elements: [3, 4, 4, 3, 5, 2, 2, 1, 1, 0] HashCode: 162496028 neither .",
             "url": "https://jz21324.github.io/Vcode/jupyter/2022/12/03/array-list-hw.html",
             "relUrl": "/jupyter/2022/12/03/array-list-hw.html",
