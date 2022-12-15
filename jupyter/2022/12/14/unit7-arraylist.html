@@ -124,6 +124,9 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#Configurations">Configurations </a></li>
+<li class="toc-entry toc-h1"><a href="#Searching">Searching </a></li>
+<li class="toc-entry toc-h1"><a href="#Sorting">Sorting </a></li>
 <li class="toc-entry toc-h1"><a href="#Homework">Homework </a></li>
 </ul><!--
 #################################################
@@ -137,9 +140,171 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Configurations">
+<a class="anchor" href="#Configurations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configurations<a class="anchor-link" href="#Configurations"> </a>
+</h1>
+<p>Arrays can be configured through</p>
+<ul>
+<li>.add()</li>
+<li>.get()</li>
+<li>.set ()</li>
+<li>.sort()</li>
+<li>.clear()</li>
+</ul>
+<p>The .add method adds an index to the array list and the .get calls the specific index number. The .set method sets the index to a new index. The .sort method sorts the indexes in a certain order and .clear will clear all the indexes in the array.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Collections</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">sports</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span> <span class="c1">//Creates a new array</span>
+        <span class="n">sports</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Football"</span><span class="p">);</span>
+        <span class="n">sports</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Basketball"</span><span class="p">);</span> <span class="c1">//adds different sports to the array</span>
+        <span class="n">sports</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Soccer"</span><span class="p">);</span>
+        <span class="n">sports</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Baseball"</span><span class="p">);</span>
+        <span class="n">sports</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Tennis"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sports</span><span class="p">);</span> <span class="c1">// prints the array</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sports</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">));</span> <span class="c1">// prints each array separately</span>
+        <span class="p">}</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The size of the array is "</span> <span class="o">+</span> <span class="n">sports</span><span class="p">.</span><span class="na">size</span><span class="p">());</span> <span class="c1">//prints the size of the array</span>
+
+        <span class="n">sports</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s">"Golf"</span><span class="p">);</span> <span class="c1">// changes the 3 array to "Golf"</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The 3 array has been changed to "</span> <span class="o">+</span> <span class="n">sports</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">3</span><span class="p">));</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+
+        <span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">sports</span><span class="p">);</span> <span class="c1">//sorts the array in alphabetical order</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The array list is in alphabetical order:"</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">i</span> <span class="p">:</span> <span class="n">sports</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">" "</span><span class="p">);</span>
+        <span class="n">sports</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span> <span class="c1">//clears the array</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The array list is now empty and says:"</span> <span class="o">+</span> <span class="n">sports</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Main</span><span class="p">.</span><span class="na">main</span><span class="p">();</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[Football, Basketball, Soccer, Baseball, Tennis]
+ 
+Football
+Basketball
+Soccer
+Baseball
+Tennis
+ 
+The size of the array is 5
+The 3 array has been changed to Golf
+ 
+The array list is in alphabetical order:
+Basketball
+Football
+Golf
+Soccer
+Tennis
+ 
+The array list is now empty and says:[]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Searching">
+<a class="anchor" href="#Searching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Searching<a class="anchor-link" href="#Searching"> </a>
+</h1>
+<ul>
+<li>
+<mark>Searching</mark> is the location of data in a linear structure</li>
+<li>involves control structures</li>
+<li>if match then index is printed</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">:</span> <span class="n">roster</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">sum</span> <span class="o">=</span> <span class="n">sum</span> <span class="o">+</span> <span class="n">name</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Sorting">
+<a class="anchor" href="#Sorting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sorting<a class="anchor-link" href="#Sorting"> </a>
+</h1>
+<ul>
+<li>
+<mark>Sorting</mark> happens by putting the ArrayList in a certain order</li>
+<li>Collections.sort({list name}) will ascend order</li>
+<li>Collections.sort(ArrayList, Collections.reverseOrder()) will descend order</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Homework">
 <a class="anchor" href="#Homework" aria-hidden="true"><span class="octicon octicon-link"></span></a>Homework<a class="anchor-link" href="#Homework"> </a>
 </h1>
+<p><a href="https://jz21324.github.io/Vcode/jupyter/2022/12/03/array-list-hw.html">https://jz21324.github.io/Vcode/jupyter/2022/12/03/array-list-hw.html</a></p>
+
 </div>
 </div>
 </div>
