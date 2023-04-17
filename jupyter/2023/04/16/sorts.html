@@ -10,15 +10,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
 <meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
-<link rel="canonical" href="https://jz21324.github.io/Vcode/jupyter/2023/04/06/sorts.html" />
-<meta property="og:url" content="https://jz21324.github.io/Vcode/jupyter/2023/04/06/sorts.html" />
+<link rel="canonical" href="https://jz21324.github.io/Vcode/jupyter/2023/04/16/sorts.html" />
+<meta property="og:url" content="https://jz21324.github.io/Vcode/jupyter/2023/04/16/sorts.html" />
 <meta property="og:site_name" content="jazair’s fastpages" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-04-06T00:00:00-05:00" />
+<meta property="article:published_time" content="2023-04-16T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Data Sorting" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-06T00:00:00-05:00","datePublished":"2023-04-06T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Data Sorting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jz21324.github.io/Vcode/jupyter/2023/04/06/sorts.html"},"url":"https://jz21324.github.io/Vcode/jupyter/2023/04/06/sorts.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-16T00:00:00-05:00","datePublished":"2023-04-16T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Data Sorting","mainEntityOfPage":{"@type":"WebPage","@id":"https://jz21324.github.io/Vcode/jupyter/2023/04/16/sorts.html"},"url":"https://jz21324.github.io/Vcode/jupyter/2023/04/16/sorts.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/Vcode/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://jz21324.github.io/Vcode/feed.xml" title="jazair's fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/Vcode/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,13 +73,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Data Sorting</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-06T00:00:00-05:00" itemprop="datePublished">
-        Apr 6, 2023
+    <h1 class="post-title p-name" itemprop="name headline">Data Sorting</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-04-16T00:00:00-05:00" itemprop="datePublished">
+        Apr 16, 2023
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      14 min read
     
 </span></p>
 
@@ -172,29 +172,42 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BubbleSort</span> <span class="p">{</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Object</span><span class="o">[]</span> <span class="nf">bubbleSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">compare</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">swap</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="c1">// iterate through each element in the array</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="c1">// compare adjacent elements in the array</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
                 <span class="c1">// if the element on the left is greater than the element on the right</span>
+                <span class="n">compare</span> <span class="o">++</span><span class="p">;</span>
                 <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
                     <span class="c1">// swap the two elements</span>
                     <span class="kt">int</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
                     <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
                     <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+                    <span class="n">swap</span> <span class="o">++</span><span class="p">;</span>
                 <span class="p">}</span>
+                
             <span class="p">}</span>
         <span class="p">}</span>
+        <span class="n">Object</span><span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="p">{</span> <span class="n">arr</span><span class="p">,</span> <span class="n">swap</span><span class="p">,</span> <span class="n">compare</span> <span class="p">};</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+        <span class="c1">// System.out.println("Number of compares: " + compare);</span>
+        <span class="c1">// System.out.println("Number of swaps: " + swap);</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// create an array of integers</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span><span class="mi">34</span><span class="p">,</span> <span class="mi">57</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">92</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">24345</span><span class="p">,</span> <span class="mi">345</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">886</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">535</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">34545</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">87</span><span class="p">,</span> <span class="mi">4467</span><span class="p">};</span>
-        <span class="c1">// sort the array using the bubbleSort function</span>
-        <span class="n">bubbleSort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
-
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">50</span><span class="o">]</span><span class="p">;</span> <span class="c1">// initialize array with size 20</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">50</span><span class="o">]</span><span class="p">;</span>
+        
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// generate a random integer between 0 and 999</span>
+        <span class="p">}</span>
+        
+        <span class="n">Object</span><span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="n">bubbleSort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
         <span class="kt">long</span> <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
         <span class="n">bubbleSort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
         <span class="kt">long</span> <span class="n">endTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
@@ -202,9 +215,12 @@ window.onload = wrap_img;
         
         <span class="kt">long</span> <span class="n">totalTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5000</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">int</span><span class="o">[]</span> <span class="n">arrCopy</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">clone</span><span class="p">();</span>
+            
             <span class="kt">long</span> <span class="n">startTime2</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-            <span class="n">bubbleSort</span><span class="p">(</span><span class="n">arrCopy</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">arr2</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// generate a random integer between 0 and 999</span>
+            <span class="p">}</span>
+            <span class="n">bubbleSort</span><span class="p">(</span><span class="n">arr2</span><span class="p">);</span>
             <span class="kt">long</span> <span class="n">endTime2</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
             <span class="n">totalTime</span> <span class="o">+=</span> <span class="p">(</span><span class="n">endTime2</span> <span class="o">-</span> <span class="n">startTime2</span><span class="p">);</span>
         <span class="p">}</span>
@@ -214,11 +230,12 @@ window.onload = wrap_img;
         <span class="c1">// print out the sorted array</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sorted array:"</span><span class="p">);</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr2</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
         <span class="p">}</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
-
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Number of swaps: "</span> <span class="o">+</span> <span class="n">result</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Number of compares: "</span> <span class="o">+</span> <span class="n">result</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Time taken for one run: "</span> <span class="o">+</span> <span class="n">duration</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
         
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for 5000 runs: "</span> <span class="o">+</span> <span class="n">avgTime</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
@@ -239,9 +256,11 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Sorted array:
-2 3 3 4 4 4 7 34 34 34 35 35 45 53 53 57 61 87 92 345 535 886 4467 24345 34545 
-Time taken for one run: 3300 nanoseconds
-Average time taken for 5000 runs: 5833 nanoseconds
+14 15 82 95 101 169 179 196 198 242 270 273 284 318 352 376 414 433 438 440 441 462 498 510 523 549 556 589 592 617 660 679 694 700 761 773 774 797 801 808 816 850 909 922 923 932 945 946 969 987 
+Number of swaps: 626
+Number of compares: 1225
+Time taken for one run: 8500 nanoseconds
+Average time taken for 5000 runs: 14948 nanoseconds
 </pre>
 </div>
 </div>
@@ -286,15 +305,19 @@ Average time taken for 5000 runs: 5833 nanoseconds
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SelectionSort</span> <span class="p">{</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Object</span><span class="o">[]</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">compare</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">swap</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="c1">// iterate through each element in the array</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="c1">// find the minimum element in the unsorted part of the array</span>
             <span class="kt">int</span> <span class="n">minIndex</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">compare</span> <span class="o">++</span><span class="p">;</span>
                 <span class="k">if</span> <span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">minIndex</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
                     <span class="n">minIndex</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+                    <span class="n">swap</span> <span class="o">++</span><span class="p">;</span>
                 <span class="p">}</span>
             <span class="p">}</span>
             <span class="c1">// swap the minimum element with the first element in the unsorted part of the array</span>
@@ -302,14 +325,21 @@ Average time taken for 5000 runs: 5833 nanoseconds
             <span class="n">arr</span><span class="o">[</span><span class="n">minIndex</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
             <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
         <span class="p">}</span>
+        
+        <span class="n">Object</span><span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="p">{</span> <span class="n">arr</span><span class="p">,</span> <span class="n">swap</span><span class="p">,</span> <span class="n">compare</span> <span class="p">};</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// create an array of integers</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span><span class="mi">46</span><span class="p">,</span><span class="mi">134</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span><span class="mi">354</span><span class="p">,</span><span class="mi">325</span><span class="p">,</span><span class="mi">67</span><span class="p">,</span><span class="mi">532</span><span class="p">,</span><span class="mi">899</span><span class="p">,</span><span class="mi">653</span><span class="p">,</span><span class="mi">4579</span><span class="p">,</span><span class="mi">896</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">434</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">35</span><span class="p">};</span>
-        <span class="c1">// sort the array using the selectionSort function</span>
-        <span class="n">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">50</span><span class="o">]</span><span class="p">;</span> <span class="c1">// initialize array with size 20</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">50</span><span class="o">]</span><span class="p">;</span>
 
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// generate a random integer between 0 and 999</span>
+        <span class="p">}</span>
+        <span class="n">Object</span><span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="n">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+        
         <span class="kt">long</span> <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
         <span class="n">selectionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
         <span class="kt">long</span> <span class="n">endTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
@@ -317,9 +347,12 @@ Average time taken for 5000 runs: 5833 nanoseconds
 
         <span class="kt">long</span> <span class="n">totalTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5000</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">int</span><span class="o">[]</span> <span class="n">arrCopy</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">clone</span><span class="p">();</span>
+            
             <span class="kt">long</span> <span class="n">startTime2</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-            <span class="n">selectionSort</span><span class="p">(</span><span class="n">arrCopy</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">arr2</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// generate a random integer between 0 and 999</span>
+            <span class="p">}</span>
+            <span class="n">selectionSort</span><span class="p">(</span><span class="n">arr2</span><span class="p">);</span>
             <span class="kt">long</span> <span class="n">endTime2</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
             <span class="n">totalTime</span> <span class="o">+=</span> <span class="p">(</span><span class="n">endTime2</span> <span class="o">-</span> <span class="n">startTime2</span><span class="p">);</span>
         <span class="p">}</span>
@@ -328,11 +361,13 @@ Average time taken for 5000 runs: 5833 nanoseconds
         <span class="c1">// print out the sorted array</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sorted array:"</span><span class="p">);</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr2</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
         <span class="p">}</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Number of swaps: "</span> <span class="o">+</span> <span class="n">result</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Number of compares: "</span> <span class="o">+</span> <span class="n">result</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Time taken for one run: "</span> <span class="o">+</span> <span class="n">duration</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
         
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for 5000 runs: "</span> <span class="o">+</span> <span class="n">avgTime</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
@@ -353,9 +388,11 @@ Average time taken for 5000 runs: 5833 nanoseconds
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Sorted array:
-2 4 10 11 12 35 46 54 67 90 134 325 354 434 532 653 896 899 4579 
-Time taken for one run: 3200 nanoseconds
-Average time taken for 5000 runs: 3685 nanoseconds
+20 26 58 62 72 75 118 148 211 216 250 256 260 273 287 305 351 357 371 379 379 385 408 461 462 483 493 518 563 605 628 631 637 679 683 728 752 763 797 809 853 855 857 867 871 887 892 929 937 967 
+Number of swaps: 112
+Number of compares: 1225
+Time taken for one run: 7400 nanoseconds
+Average time taken for 5000 runs: 9900 nanoseconds
 </pre>
 </div>
 </div>
@@ -399,26 +436,37 @@ Average time taken for 5000 runs: 3685 nanoseconds
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">InsertionSort</span> <span class="p">{</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">insertionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Object</span><span class="o">[]</span> <span class="nf">insertionSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">compare</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">swap</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="c1">// iterate through each element in the array</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="c1">// insert the i-th element into the correct position in the sorted part of the array</span>
             <span class="kt">int</span> <span class="n">key</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
             <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">compare</span> <span class="o">++</span><span class="p">;</span>
             <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
                 <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
                 <span class="n">j</span><span class="o">--</span><span class="p">;</span>
+                <span class="n">swap</span> <span class="o">++</span><span class="p">;</span>
             <span class="p">}</span>
             <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">key</span><span class="p">;</span>
         <span class="p">}</span>
+        <span class="n">Object</span><span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="p">{</span> <span class="n">arr</span><span class="p">,</span> <span class="n">swap</span><span class="p">,</span> <span class="n">compare</span> <span class="p">};</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// create an array of integers</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span><span class="mi">640</span><span class="p">,</span> <span class="mi">304</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">54</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">456</span><span class="p">,</span><span class="mi">78</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">323</span><span class="p">,</span><span class="mi">6754</span><span class="p">,</span><span class="mi">354</span><span class="p">};</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">50</span><span class="o">]</span><span class="p">;</span> <span class="c1">// initialize array with size 20</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">50</span><span class="o">]</span><span class="p">;</span>
         <span class="c1">// sort the array using the insertionSort function</span>
-        <span class="n">insertionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// generate a random integer between 0 and 999</span>
+        <span class="p">}</span>
+
+        <span class="n">Object</span><span class="o">[]</span> <span class="n">result</span> <span class="o">=</span> <span class="n">insertionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
 
         <span class="kt">long</span> <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
         <span class="n">insertionSort</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
@@ -427,9 +475,12 @@ Average time taken for 5000 runs: 3685 nanoseconds
 
         <span class="kt">long</span> <span class="n">totalTime</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5000</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">int</span><span class="o">[]</span> <span class="n">arrCopy</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">clone</span><span class="p">();</span>
+            
             <span class="kt">long</span> <span class="n">startTime2</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-            <span class="n">insertionSort</span><span class="p">(</span><span class="n">arrCopy</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">arr2</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// generate a random integer between 0 and 999</span>
+            <span class="p">}</span>
+            <span class="n">insertionSort</span><span class="p">(</span><span class="n">arr2</span><span class="p">);</span>
             <span class="kt">long</span> <span class="n">endTime2</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
             <span class="n">totalTime</span> <span class="o">+=</span> <span class="p">(</span><span class="n">endTime2</span> <span class="o">-</span> <span class="n">startTime2</span><span class="p">);</span>
         <span class="p">}</span>
@@ -438,11 +489,12 @@ Average time taken for 5000 runs: 3685 nanoseconds
         <span class="c1">// print out the sorted array</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sorted array:"</span><span class="p">);</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr2</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
         <span class="p">}</span>
         
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">""</span><span class="p">);</span>
-
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Number of swaps: "</span> <span class="o">+</span> <span class="n">result</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Number of compares: "</span> <span class="o">+</span> <span class="n">result</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Time taken for one run: "</span> <span class="o">+</span> <span class="n">duration</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
         
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for 5000 runs: "</span> <span class="o">+</span> <span class="n">avgTime</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
@@ -463,9 +515,11 @@ Average time taken for 5000 runs: 3685 nanoseconds
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Sorted array:
-3 4 5 13 23 30 45 54 56 65 78 82 234 304 323 354 456 640 6754 
-Time taken for one run: 3500 nanoseconds
-Average time taken for 5000 runs: 3480 nanoseconds
+39 44 64 94 105 152 161 169 177 180 190 207 219 240 240 244 297 303 309 316 325 330 430 448 456 479 511 513 527 531 543 557 611 635 727 740 745 752 760 772 785 813 891 909 914 919 930 937 938 995 
+Number of swaps: 598
+Number of compares: 49
+Time taken for one run: 5700 nanoseconds
+Average time taken for 5000 runs: 6452 nanoseconds
 </pre>
 </div>
 </div>
@@ -509,6 +563,8 @@ Average time taken for 5000 runs: 3480 nanoseconds
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MergeSort</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">compare</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kd">private</span> <span class="kd">static</span> <span class="kt">int</span> <span class="n">swap</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">left</span> <span class="o">&lt;</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
@@ -545,6 +601,8 @@ Average time taken for 5000 runs: 3480 nanoseconds
         <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="n">left</span><span class="p">;</span>
         <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">n1</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">compare</span> <span class="o">++</span><span class="p">;</span>
+            
             <span class="k">if</span> <span class="p">(</span><span class="n">leftArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&lt;=</span> <span class="n">rightArray</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
                 <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">leftArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
                 <span class="n">i</span><span class="o">++</span><span class="p">;</span>
@@ -553,6 +611,7 @@ Average time taken for 5000 runs: 3480 nanoseconds
                 <span class="n">j</span><span class="o">++</span><span class="p">;</span>
             <span class="p">}</span>
             <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">swap</span> <span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
 
         <span class="c1">// copy any remaining elements from the left and right subarrays into the original array</span>
@@ -560,22 +619,29 @@ Average time taken for 5000 runs: 3480 nanoseconds
             <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">leftArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
             <span class="n">i</span><span class="o">++</span><span class="p">;</span>
             <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">swap</span> <span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
         <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&lt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">rightArray</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
             <span class="n">j</span><span class="o">++</span><span class="p">;</span>
             <span class="n">k</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">swap</span> <span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="c1">// create an array of integers</span>
-        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="p">{</span><span class="mi">164</span><span class="p">,</span> <span class="mi">234</span><span class="p">,</span> <span class="mi">725</span><span class="p">,</span> <span class="mi">132</span><span class="p">,</span> <span class="mi">323</span><span class="p">,</span> <span class="mi">123</span><span class="p">,</span><span class="mi">234</span><span class="p">,</span><span class="mi">466</span><span class="p">,</span><span class="mi">43</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">34</span><span class="p">};</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">50</span><span class="o">]</span><span class="p">;</span> <span class="c1">// initialize array with size 20</span>
+        <span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">50</span><span class="o">]</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
 
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// generate a random integer between 0 and 999</span>
+        <span class="p">}</span>
         <span class="c1">// sort the array using the mergeSort function</span>
         <span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
 
+        
         <span class="kt">long</span> <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
         <span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
         <span class="kt">long</span> <span class="n">endTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
@@ -594,13 +660,18 @@ Average time taken for 5000 runs: 3480 nanoseconds
         <span class="kt">long</span> <span class="n">totalDuration</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5000</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="kt">long</span> <span class="n">startTime2</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-            <span class="n">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="mi">50</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">arr2</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span> <span class="c1">// generate a random integer between 0 and 999</span>
+            <span class="p">}</span>
+            <span class="n">mergeSort</span><span class="p">(</span><span class="n">arr2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
             <span class="kt">long</span> <span class="n">endTime2</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
             <span class="n">totalDuration</span> <span class="o">+=</span> <span class="p">(</span><span class="n">endTime2</span> <span class="o">-</span> <span class="n">startTime2</span><span class="p">);</span>
         <span class="p">}</span>
 
         <span class="c1">// calculate the average time it takes to sort the array and print it out</span>
         <span class="kt">long</span> <span class="n">avgDuration</span> <span class="o">=</span> <span class="n">totalDuration</span> <span class="o">/</span> <span class="mi">5000</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Number of swaps: "</span> <span class="o">+</span> <span class="n">swap</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Number of compares: "</span> <span class="o">+</span> <span class="n">compare</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Average time taken for 5000 runs: "</span> <span class="o">+</span> <span class="n">avgDuration</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -619,9 +690,11 @@ Average time taken for 5000 runs: 3480 nanoseconds
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Sorted array:
-12 34 43 123 132 164 234 234 323 466 725 
-Time taken for one run: 2600 nanoseconds
-Average time taken for 5000 runs: 3363 nanoseconds
+15 27 66 68 139 162 372 454 502 502 505 561 567 569 591 663 715 761 830 867 
+Time taken for one run: 4500 nanoseconds
+Number of swaps: 880352
+Number of compares: 635172
+Average time taken for 5000 runs: 6060 nanoseconds
 </pre>
 </div>
 </div>
@@ -684,8 +757,17 @@ Average time taken for 5000 runs: 3363 nanoseconds
 
         <span class="c1">// Measure the time it takes to look up the key '12' in the 'hashmap' using the 'lookUp' method,</span>
         <span class="c1">// and print the time taken in nanoseconds.</span>
-        <span class="kt">long</span> <span class="n">lookUpTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">lookUp</span><span class="p">(</span><span class="n">hashmap</span><span class="p">,</span> <span class="mi">36</span><span class="p">));</span>
+        <span class="kt">long</span> <span class="n">totalDuration</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5000</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">long</span> <span class="n">startTime2</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            <span class="kt">long</span> <span class="n">lookUpTime</span> <span class="o">=</span> <span class="p">(</span><span class="n">lookUp</span><span class="p">(</span><span class="n">hashmap</span><span class="p">,</span> <span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">5000</span><span class="p">));</span>
+            <span class="kt">long</span> <span class="n">endTime2</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+            <span class="n">totalDuration</span> <span class="o">+=</span> <span class="p">(</span><span class="n">endTime2</span> <span class="o">-</span> <span class="n">startTime2</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="kt">long</span> <span class="n">avgDuration</span> <span class="o">=</span> <span class="n">totalDuration</span> <span class="o">/</span> <span class="mi">5000</span><span class="p">;</span>
+
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hashmap look up time: "</span> <span class="o">+</span> <span class="n">lookUpTime</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hashmap average look up time: "</span> <span class="o">+</span> <span class="n">avgDuration</span> <span class="o">+</span> <span class="s">" nanoseconds"</span><span class="p">);</span>
 
         <span class="c1">// Measure the time it takes to search for the integer value '12' in the 'list' using a binary search algorithm</span>
         <span class="c1">// implemented in the 'binarySearchTime' method, and print the time taken in nanoseconds.</span>
@@ -735,9 +817,20 @@ Average time taken for 5000 runs: 3363 nanoseconds
 
 <div class="output_area">
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hashmap look up time: 4700 nanoseconds
-Binary search time: 8200 nanoseconds
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            int startTime2 = </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">System.nanoTime()</span><span class="ansi-black-intense-fg ansi-bold">;</span>
+<span class="ansi-red-intense-fg ansi-bold">incompatible types: possible lossy conversion from long to int</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            int lookUpTime = (lookUp(hashmap, </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">Math.random() * 5000</span><span class="ansi-black-intense-fg ansi-bold">));</span>
+<span class="ansi-red-intense-fg ansi-bold">incompatible types: double cannot be converted to java.lang.Integer</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">            int endTime2 = </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">System.nanoTime()</span><span class="ansi-black-intense-fg ansi-bold">;</span>
+<span class="ansi-red-intense-fg ansi-bold">incompatible types: possible lossy conversion from long to int</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        System.out.println("Hashmap look up time: " + </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">lookUpTime</span><span class="ansi-black-intense-fg ansi-bold"> + " nanoseconds");</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   variable lookUpTime</span>
 </pre>
 </div>
 </div>
@@ -816,7 +909,7 @@ Binary search time: 8200 nanoseconds
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/Vcode/jupyter/2023/04/06/sorts.html" hidden></a>
+</script><a class="u-url" href="/Vcode/jupyter/2023/04/16/sorts.html" hidden></a>
 </article>
 
       </div>
