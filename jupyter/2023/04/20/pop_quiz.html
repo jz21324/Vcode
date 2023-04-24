@@ -147,15 +147,14 @@ window.onload = wrap_img;
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="n">time</span><span class="p">;</span>
 
 
-    <span class="kd">public</span> <span class="nf">Book</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">,</span> <span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// setter</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">id</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">Book</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// setter</span>
         <span class="k">this</span><span class="p">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">time</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
         <span class="n">count</span> <span class="o">++</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// getter</span>
-        <span class="k">return</span> <span class="n">title</span><span class="p">;</span>
+        <span class="k">return</span> <span class="s">"Title: "</span> <span class="o">+</span> <span class="n">title</span><span class="p">;</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getBookCount</span><span class="p">()</span> <span class="p">{</span>
@@ -171,12 +170,19 @@ window.onload = wrap_img;
     <span class="p">}</span>
     
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Book</span> <span class="n">book1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Book</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">),</span> <span class="s">"Starships"</span><span class="p">);</span>
-        <span class="n">Book</span> <span class="n">book2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Book</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">),</span> <span class="s">"Asteroids"</span><span class="p">);</span>
-
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">book1</span><span class="p">.</span><span class="na">title</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="n">book1</span><span class="p">.</span><span class="na">id</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">book2</span><span class="p">.</span><span class="na">title</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="n">book2</span><span class="p">.</span><span class="na">id</span><span class="p">);</span> 
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Count: "</span> <span class="o">+</span> <span class="n">Book</span><span class="p">.</span><span class="na">count</span><span class="p">);</span>
+        <span class="n">Book</span><span class="o">[]</span> <span class="n">books1</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"Starships"</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"Asteroids"</span><span class="p">),</span>
+        <span class="p">};</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Book</span> <span class="n">i</span> <span class="p">:</span> <span class="n">books1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ID: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
+        <span class="p">}</span>
+        <span class="c1">// System.out.println(book1.title + ": " + book1.id);</span>
+        <span class="c1">// System.out.println(book2.title + ": " + book2.id); </span>
+        <span class="c1">// System.out.println("Count: " + Book.count);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Book Count: "</span> <span class="o">+</span> <span class="n">Book</span><span class="p">.</span><span class="na">count</span><span class="p">);</span>
     <span class="p">}</span>
     
 <span class="p">}</span>
@@ -194,9 +200,12 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Starships: 65
-Asteroids: 40
-Count: 2
+<pre>Title: Starships
+ID: 992118609
+Title: Asteroids
+ID: 362542593
+
+Book Count: 2
 </pre>
 </div>
 </div>
@@ -218,8 +227,8 @@ Count: 2
     <span class="kd">private</span> <span class="n">String</span> <span class="n">author</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">checkouts</span><span class="p">;</span>
 
-    <span class="kd">public</span> <span class="nf">Novel</span> <span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">,</span> <span class="n">String</span> <span class="n">title</span><span class="p">,</span> <span class="n">String</span> <span class="n">author</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">title</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="nf">Novel</span> <span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">,</span> <span class="n">String</span> <span class="n">author</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">title</span><span class="p">);</span>
         <span class="k">this</span><span class="p">.</span><span class="na">author</span> <span class="o">=</span> <span class="n">author</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">checkouts</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="p">}</span>
@@ -232,27 +241,32 @@ Count: 2
         <span class="k">this</span><span class="p">.</span><span class="na">author</span> <span class="o">=</span> <span class="n">author</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="c1">// public void checkout() {</span>
-    <span class="c1">//     checkouts ++;</span>
-    <span class="c1">//     this.startTime = System.nanoTime();</span>
+    <span class="c1">// public int getId() {</span>
+    <span class="c1">//     return this.id;</span>
     <span class="c1">// }</span>
+    <span class="c1">// public void setId(int id) {</span>
+    <span class="c1">//     this.id = id;</span>
+    <span class="c1">// }</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">checkout</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">checkouts</span> <span class="o">++</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">time</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
+    <span class="p">}</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getCheckouts</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">checkouts</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
         
         <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">);</span>
-        <span class="n">Novel</span> <span class="n">novel1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="s">"The Awakening"</span><span class="p">,</span> <span class="s">"Steven Robbers"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Novel 1"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Id: "</span> <span class="o">+</span> <span class="n">novel1</span><span class="p">.</span><span class="na">id</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Title and Author: "</span> <span class="o">+</span> <span class="n">novel1</span><span class="p">.</span><span class="na">title</span> <span class="o">+</span> <span class="s">" by "</span> <span class="o">+</span> <span class="n">novel1</span><span class="p">.</span><span class="na">author</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Book Count: "</span> <span class="o">+</span> <span class="n">count</span><span class="p">);</span>
 
-        <span class="n">Novel</span> <span class="n">novel2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="n">num</span> <span class="o">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">),</span> <span class="s">"Green Leaves"</span><span class="p">,</span> <span class="s">"Tyler Boulder"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Novel 2"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Id: "</span> <span class="o">+</span> <span class="n">novel2</span><span class="p">.</span><span class="na">id</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Title and Author: "</span> <span class="o">+</span> <span class="n">novel2</span><span class="p">.</span><span class="na">title</span> <span class="o">+</span> <span class="s">" by "</span> <span class="o">+</span> <span class="n">novel2</span><span class="p">.</span><span class="na">author</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Book Count: "</span> <span class="o">+</span> <span class="n">count</span><span class="p">);</span>
+        <span class="n">Novel</span><span class="o">[]</span> <span class="n">novels</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"The Awakening"</span><span class="p">,</span> <span class="s">"Steven Robbers"</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"Green Leaves"</span><span class="p">,</span> <span class="s">"Tyler Boulder"</span><span class="p">),</span>
+        <span class="p">};</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Novel</span> <span class="n">i</span> <span class="p">:</span> <span class="n">novels</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ID: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Shelf Life: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">shelfLife</span><span class="p">());</span>
+        <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -269,14 +283,12 @@ Count: 2
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Novel 1
-Id: 38
-Title and Author: The Awakening by Steven Robbers
-Book Count: 56
-Novel 2
-Id: 43
-Title and Author: Green Leaves by Tyler Boulder
-Book Count: 57
+<pre>Title: The Awakening
+ID: 1141597143
+Shelf Life: 960800.0
+Title: Green Leaves
+ID: 523249130
+Shelf Life: 1544500.0
 </pre>
 </div>
 </div>
@@ -298,8 +310,8 @@ Book Count: 57
     <span class="kd">private</span> <span class="n">String</span> <span class="n">company</span><span class="p">;</span>
 
 
-    <span class="n">Textbook</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">,</span> <span class="n">String</span> <span class="n">title</span><span class="p">,</span> <span class="n">String</span> <span class="n">company</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">title</span><span class="p">);</span>
+    <span class="n">Textbook</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">,</span> <span class="n">String</span> <span class="n">company</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">title</span><span class="p">);</span>
         <span class="k">this</span><span class="p">.</span><span class="na">company</span> <span class="o">=</span> <span class="n">company</span><span class="p">;</span>
     <span class="p">}</span>
 
@@ -312,16 +324,18 @@ Book Count: 57
     <span class="p">}</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
         
-        <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">);</span>
-        <span class="n">Textbook</span> <span class="n">textbook1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="s">"Calculus AB"</span><span class="p">,</span> <span class="s">"Bernabeo Maths"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Textbook 1"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Id: "</span> <span class="o">+</span> <span class="n">textbook1</span><span class="p">.</span><span class="na">id</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Title and Publishing Company: "</span> <span class="o">+</span> <span class="n">textbook1</span><span class="p">.</span><span class="na">title</span> <span class="o">+</span> <span class="s">" by "</span> <span class="o">+</span> <span class="n">textbook1</span><span class="p">.</span><span class="na">company</span><span class="p">);</span>
+        <span class="n">Textbook</span><span class="o">[]</span> <span class="n">textbooks1</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Calculus AB"</span><span class="p">,</span> <span class="s">"Bernabeo Maths"</span><span class="p">),</span>
+            <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Calculus BC"</span><span class="p">,</span> <span class="s">"Krenz Addition Co."</span><span class="p">),</span>
+        <span class="p">};</span>
 
-        <span class="n">Textbook</span> <span class="n">textbook2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="n">num</span> <span class="o">+</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">10</span><span class="p">),</span> <span class="s">"Calculus BC"</span><span class="p">,</span> <span class="s">"Krenz Addition Co."</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Novel 2"</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Id: "</span> <span class="o">+</span> <span class="n">textbook2</span><span class="p">.</span><span class="na">id</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Title and Publishing Company: "</span> <span class="o">+</span> <span class="n">textbook2</span><span class="p">.</span><span class="na">title</span> <span class="o">+</span> <span class="s">" by "</span> <span class="o">+</span> <span class="n">textbook2</span><span class="p">.</span><span class="na">company</span><span class="p">);</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Textbook</span> <span class="n">i</span> <span class="p">:</span> <span class="n">textbooks1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ID: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Shelf Life: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">shelfLife</span><span class="p">());</span>
+        <span class="p">}</span>
+        
+       
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -338,12 +352,12 @@ Book Count: 57
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Textbook 1
-Id: 40
-Title and Publishing Company: Calculus AB by Bernabeo Maths
-Novel 2
-Id: 45
-Title and Publishing Company: Calculus BC by Krenz Addition Co.
+<pre>Title: Calculus AB
+ID: 180249287
+Shelf Life: 329500.0
+Title: Calculus BC
+ID: 2144296853
+Shelf Life: 694200.0
 </pre>
 </div>
 </div>
