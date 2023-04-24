@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      3 min read
     
 </span></p>
 
@@ -141,50 +141,53 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="p">{</span>
-    <span class="kd">protected</span> <span class="n">String</span> <span class="n">title</span><span class="p">;</span>
-    <span class="kd">protected</span> <span class="kt">int</span> <span class="n">id</span><span class="p">;</span>
-    <span class="kd">public</span> <span class="kd">static</span>  <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="n">time</span><span class="p">;</span>
+    
+    <span class="kd">protected</span> <span class="n">String</span> <span class="n">title</span><span class="p">;</span> <span class="c1">// The title of the book</span>
+    <span class="kd">public</span> <span class="kd">static</span>  <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// total number of Book objects created</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="n">time</span><span class="p">;</span> <span class="c1">// The start time of the Book object in nanoseconds</span>
 
-
-    <span class="kd">public</span> <span class="nf">Book</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// setter</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">time</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-        <span class="n">count</span> <span class="o">++</span><span class="p">;</span>
+    <span class="c1">// Constructor for the Book class</span>
+    <span class="kd">public</span> <span class="nf">Book</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span> <span class="c1">// Set the title of the book</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">time</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span> <span class="c1">// Set the time when the book is created</span>
+        <span class="n">count</span> <span class="o">++</span><span class="p">;</span> <span class="c1">// Number of books goes up each time a new book is added</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span> <span class="c1">// getter</span>
-        <span class="k">return</span> <span class="s">"Title: "</span> <span class="o">+</span> <span class="n">title</span><span class="p">;</span>
+    <span class="c1">// Getter for String representation of the Book object</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">"Title of Book: "</span> <span class="o">+</span> <span class="n">title</span><span class="p">;</span> <span class="c1">// Return the title of the book</span>
     <span class="p">}</span>
 
+    <span class="c1">// getter for the current count of Book objects</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getBookCount</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="n">count</span><span class="p">;</span>
+        <span class="k">return</span> <span class="n">count</span><span class="p">;</span> <span class="c1">// Return the count of Book objects</span>
     <span class="p">}</span>
 
+    <span class="c1">// Method to get the elapsed time since the creation of the Book object</span>
     <span class="kd">public</span> <span class="kt">double</span> <span class="nf">shelfLife</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">()</span> <span class="o">-</span> <span class="n">time</span><span class="p">);</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">()</span> <span class="o">-</span> <span class="n">time</span><span class="p">);</span> <span class="c1">// Calculates the time since creation</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">expired</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">shelfLife</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">100000000</span><span class="p">);</span>
+        <span class="k">return</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">shelfLife</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mi">5</span> <span class="o">*</span> <span class="mi">100000000</span><span class="p">);</span> <span class="c1">// Check if the elapsed time is greater than 5 seconds</span>
     <span class="p">}</span>
     
+    <span class="c1">// Tester Method</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Create an array with two Books</span>
         <span class="n">Book</span><span class="o">[]</span> <span class="n">books1</span> <span class="o">=</span> <span class="p">{</span>
             <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"Starships"</span><span class="p">),</span>
             <span class="k">new</span> <span class="n">Book</span><span class="p">(</span><span class="s">"Asteroids"</span><span class="p">),</span>
         <span class="p">};</span>
+        <span class="c1">// Print the title and id of each Book</span>
         <span class="k">for</span> <span class="p">(</span><span class="n">Book</span> <span class="n">i</span> <span class="p">:</span> <span class="n">books1</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ID: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span> <span class="c1">// Print the title of the book</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ID: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span> <span class="c1">// Print the id of the object</span>
         <span class="p">}</span>
-        <span class="c1">// System.out.println(book1.title + ": " + book1.id);</span>
-        <span class="c1">// System.out.println(book2.title + ": " + book2.id); </span>
-        <span class="c1">// System.out.println("Count: " + Book.count);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Book Count: "</span> <span class="o">+</span> <span class="n">Book</span><span class="p">.</span><span class="na">count</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span> 
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Book Count: "</span> <span class="o">+</span> <span class="n">Book</span><span class="p">.</span><span class="na">count</span><span class="p">);</span> <span class="c1">// Print the total count of Book objects</span>
     <span class="p">}</span>
-    
 <span class="p">}</span>
 
 <span class="n">Book</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -200,12 +203,12 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Title: Starships
-ID: 992118609
-Title: Asteroids
-ID: 362542593
+<pre>Title of Book: Starships
+ID: 761642678
+Title of Book: Asteroids
+ID: 1253464817
 
-Book Count: 2
+Book Count: 12
 </pre>
 </div>
 </div>
@@ -223,49 +226,49 @@ Book Count: 2
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Novel</span> <span class="kd">extends</span> <span class="n">Book</span> <span class="p">{</span> 
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Novel</span> <span class="kd">extends</span> <span class="n">Book</span> <span class="p">{</span> <span class="c1">// extends to the parent class</span>
     <span class="kd">private</span> <span class="n">String</span> <span class="n">author</span><span class="p">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">checkouts</span><span class="p">;</span>
 
     <span class="kd">public</span> <span class="nf">Novel</span> <span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">,</span> <span class="n">String</span> <span class="n">author</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="n">title</span><span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">author</span> <span class="o">=</span> <span class="n">author</span><span class="p">;</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">checkouts</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">title</span><span class="p">);</span> <span class="c1">// grabs the title from the Book class</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">author</span> <span class="o">=</span> <span class="n">author</span><span class="p">;</span> <span class="c1">// sets the author of the class</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">checkouts</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// sets the number of checkouts to 0</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getAuthor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Method that gets the author</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getAuthor</span><span class="p">()</span> <span class="p">{</span> 
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">author</span><span class="p">;</span>
     <span class="p">}</span>
     
+    <span class="c1">// setter for the author </span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setAuthor</span><span class="p">(</span><span class="n">String</span> <span class="n">author</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">author</span> <span class="o">=</span> <span class="n">author</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="c1">// public int getId() {</span>
-    <span class="c1">//     return this.id;</span>
-    <span class="c1">// }</span>
-    <span class="c1">// public void setId(int id) {</span>
-    <span class="c1">//     this.id = id;</span>
-    <span class="c1">// }</span>
+    <span class="c1">// setter for the time after the checkout</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">checkout</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">checkouts</span> <span class="o">++</span><span class="p">;</span>
         <span class="k">this</span><span class="p">.</span><span class="na">time</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
     <span class="p">}</span>
+
+    <span class="c1">// getter for the number of checkouts</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getCheckouts</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">checkouts</span><span class="p">;</span>
     <span class="p">}</span>
+
+    <span class="c1">// Tester class</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
         
-        <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">);</span>
-
+        <span class="c1">// creates an array for the novels</span>
         <span class="n">Novel</span><span class="o">[]</span> <span class="n">novels</span> <span class="o">=</span> <span class="p">{</span>
             <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"The Awakening"</span><span class="p">,</span> <span class="s">"Steven Robbers"</span><span class="p">),</span>
             <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"Green Leaves"</span><span class="p">,</span> <span class="s">"Tyler Boulder"</span><span class="p">),</span>
         <span class="p">};</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">Novel</span> <span class="n">i</span> <span class="p">:</span> <span class="n">novels</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Novel</span> <span class="n">i</span> <span class="p">:</span> <span class="n">novels</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// iterates throught the novels in the array</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ID: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Shelf Life: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">shelfLife</span><span class="p">());</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Shelf Life: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">shelfLife</span><span class="p">());</span> <span class="c1">// prints the time on the shelf</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -283,12 +286,12 @@ Book Count: 2
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Title: The Awakening
-ID: 1141597143
-Shelf Life: 960800.0
-Title: Green Leaves
-ID: 523249130
-Shelf Life: 1544500.0
+<pre>Title of Book: The Awakening
+ID: 1872442921
+Shelf Life: 879600.0
+Title of Book: Green Leaves
+ID: 714712510
+Shelf Life: 1833600.0
 </pre>
 </div>
 </div>
@@ -306,30 +309,36 @@ Shelf Life: 1544500.0
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Textbook</span> <span class="kd">extends</span> <span class="n">Book</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">company</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Textbook</span> <span class="kd">extends</span> <span class="n">Book</span> <span class="p">{</span> <span class="c1">// extends fromt the Book class</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">company</span><span class="p">;</span> <span class="c1">// creates string for the publishing company</span>
 
 
     <span class="n">Textbook</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">,</span> <span class="n">String</span> <span class="n">company</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="n">title</span><span class="p">);</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">title</span><span class="p">);</span> <span class="c1">// extends to the title from the Book class</span>
         <span class="k">this</span><span class="p">.</span><span class="na">company</span> <span class="o">=</span> <span class="n">company</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="c1">// getter for the company</span>
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">getCompany</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">company</span><span class="p">;</span>
     <span class="p">}</span>
 
+    <span class="c1">// setter for the company</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setCompany</span><span class="p">(</span><span class="n">String</span> <span class="n">Company</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">company</span> <span class="o">=</span> <span class="n">company</span><span class="p">;</span>
     <span class="p">}</span>
+
+    <span class="c1">// Tester method</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
         
+        <span class="c1">// creates array for textbooks</span>
         <span class="n">Textbook</span><span class="o">[]</span> <span class="n">textbooks1</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1">// adds to the array</span>
             <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Calculus AB"</span><span class="p">,</span> <span class="s">"Bernabeo Maths"</span><span class="p">),</span>
             <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Calculus BC"</span><span class="p">,</span> <span class="s">"Krenz Addition Co."</span><span class="p">),</span>
         <span class="p">};</span>
 
-        <span class="k">for</span> <span class="p">(</span><span class="n">Textbook</span> <span class="n">i</span> <span class="p">:</span> <span class="n">textbooks1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Textbook</span> <span class="n">i</span> <span class="p">:</span> <span class="n">textbooks1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// iterates through array</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ID: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Shelf Life: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">shelfLife</span><span class="p">());</span>
@@ -352,12 +361,12 @@ Shelf Life: 1544500.0
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Title: Calculus AB
-ID: 180249287
-Shelf Life: 329500.0
-Title: Calculus BC
-ID: 2144296853
-Shelf Life: 694200.0
+<pre>Title of Book: Calculus AB
+ID: 1701010777
+Shelf Life: 1129900.0
+Title of Book: Calculus BC
+ID: 1805954949
+Shelf Life: 1567500.0
 </pre>
 </div>
 </div>
