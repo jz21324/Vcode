@@ -183,6 +183,7 @@ window.onload = wrap_img;
         <span class="k">for</span> <span class="p">(</span><span class="n">Book</span> <span class="n">i</span> <span class="p">:</span> <span class="n">books1</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span> <span class="c1">// Print the title of the book</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ID: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span> <span class="c1">// Print the id of the object</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Shelf Life: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">shelfLife</span><span class="p">());</span>
         <span class="p">}</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>  
@@ -204,9 +205,11 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Title of Book: Starships
-ID: 1216506367
+ID: 1759185231
+Shelf Life: 6173800.0
 Title of Book: Asteroids
-ID: 226553483
+ID: 1058020365
+Shelf Life: 1.45347E7
 
 Book Count: 2
 </pre>
@@ -265,7 +268,7 @@ Book Count: 2
             <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"The Awakening"</span><span class="p">,</span> <span class="s">"Steven Robbers"</span><span class="p">),</span>
             <span class="k">new</span> <span class="n">Novel</span><span class="p">(</span><span class="s">"Green Leaves"</span><span class="p">,</span> <span class="s">"Tyler Boulder"</span><span class="p">),</span>
         <span class="p">};</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">Novel</span> <span class="n">i</span> <span class="p">:</span> <span class="n">novels</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// iterates throught the novels in the array</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">Novel</span> <span class="n">i</span> <span class="p">:</span> <span class="n">novels</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// iterates throughout the novels in the array</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"ID: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">hashCode</span><span class="p">());</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Shelf Life: "</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="na">shelfLife</span><span class="p">());</span> <span class="c1">// prints the time on the shelf</span>
@@ -287,11 +290,11 @@ Book Count: 2
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Title of Book: The Awakening
-ID: 1872442921
-Shelf Life: 879600.0
+ID: 1944019648
+Shelf Life: 2515000.0
 Title of Book: Green Leaves
-ID: 714712510
-Shelf Life: 1833600.0
+ID: 1119931946
+Shelf Life: 8194900.0
 </pre>
 </div>
 </div>
@@ -362,11 +365,11 @@ Shelf Life: 1833600.0
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Title of Book: Calculus AB
-ID: 1701010777
-Shelf Life: 1129900.0
+ID: 2098156043
+Shelf Life: 3193500.0
 Title of Book: Calculus BC
-ID: 1805954949
-Shelf Life: 1567500.0
+ID: 1251145001
+Shelf Life: 7630900.0
 </pre>
 </div>
 </div>
